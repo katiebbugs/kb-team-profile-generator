@@ -30,23 +30,17 @@ const addEmployee = employeeInfo => {
                 newEmployee = new Employee(firstName, lastName, id);
         };
         cards += `
-                <div class="column is-one-quarter-desktop">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-left">
-                                    ${newEmployee.getIcon()}
-                                </div>
-                                <div class="media-content">
-                                    <p class="title is-4">${newEmployee.getName()}</p>
-                                    <p class="subtitle is-6">${newEmployee.getRole()}</p>
-                                </div>
+                <div class="col-6 col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <div class="card-title">
+                                ${newEmployee.getIcon()}
+                                <h5>${newEmployee.getName()}</h5>
                             </div>
-                            <div class="content">
-                                <p>${newEmployee.getId()}<br/>
-                                ${newEmployee.getEmail()}<br/>
-                                ${roleInfo}</p>
-                            </div>
+                            <p class="card-subtitle mb-2 text-muted">${newEmployee.getRole()}</p>
+                            <p class="card-text">${newEmployee.getId()}<br/>
+                            ${newEmployee.getEmail()}<br/>
+                            ${roleInfo}</p>
                         </div>
                     </div>
                 </div>`  
@@ -64,22 +58,22 @@ const generatePage = templateData => {
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
             <title>Team Profile</title>
         </head>
-        <body>
-            <section class="hero is-info is-bold">
-                <div class="hero-body">
-                    <div class="container">
-                        <h1 class="title is-1">The Team</h1>
+        <body class="container">
+            <header class="row align-items-start bg-info">
+                <div class="col primary">
+                    <h1 class="text-center">The Team</h1>
+                </div>
+            </header>
+            <main class="row align-items-center">
+                <section class="container">
+                    <div class="row row-cols-2">
+                        ${addEmployee(templateData)}
                     </div>
-                </div>
-            </section>
-            <main class="m-6">
-                <div class="columns is-flex is-flex-wrap-wrap is-flex-direction-row is-justify-content-center">
-                    ${addEmployee(templateData)}
-                </div>
+                </section>
             </main>
         </body>
     </html>
