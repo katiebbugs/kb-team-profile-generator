@@ -45,7 +45,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'officeNumber',
+        name: 'office',
         message: `What is their office number?`,
         when: ({ role }) => {
             if (role === 'Manager') {
@@ -58,7 +58,7 @@ const questions = [
     {
         type: 'input',
         name: 'github',
-        message: ({ firstName }) => `What is their GitHub username? (required)`,
+        message: `What is their GitHub username? (required)`,
         when: ({ role }) => {
             if (role === 'Engineer') {
                 return true;
