@@ -8,9 +8,10 @@ Creates a HTML team profile page with CSS using command line input
 
 Walkthrough Video
 
-https://drive.google.com/file/d/1iOLGAymZF_OKBqD00si2dIdvnvpRwfCi/view?usp=sharing
+https://drive.google.com/file/d/1NzUM3J56a3mmMKIvhIlUvNkKkBCD7ORQ/view?usp=sharing
 
-![team-profile](https://user-images.githubusercontent.com/79028196/119305612-33df8d80-bc26-11eb-84b2-3bff1a331393.png)
+![team-profile](https://user-images.githubusercontent.com/79028196/119387624-6e791280-bc86-11eb-9e91-fc2296a21706.png)
+
 
  
 ## Table of Contents
