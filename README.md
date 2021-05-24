@@ -25,7 +25,7 @@ Clone the repository from GitHub and download Node, inquirer module, and Jest fo
 
 ## Usage 
 
-Use inquirer from your command line to answer questions about your project.
+Use inquirer from your command line to answer questions about your team.
 
 ## License 
 
